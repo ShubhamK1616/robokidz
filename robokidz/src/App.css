@@ -10,6 +10,17 @@
   height: 40vmin;
   pointer-events: none;
 }
+.sidebar-divider {
+  border-bottom: 1px solid #ffffff26;
+  margin: 0 8% 8%;
+}
+.sidebar-heading {
+  color: #ffffff66;
+  text-align: left;
+  padding: 0 8%;
+  font-weight: 800;
+  font-size: .65rem;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

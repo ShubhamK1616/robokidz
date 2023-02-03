@@ -10,7 +10,11 @@ function Header() {
     //     </div>
     // </div>
     <div className='w-screen h-screen flex'>
-        <div className='bg-[#4e73df]' style={{width : "15%", height : "100%"}}><img style={{height : "15%", width : "100%"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' /></div>
+        <div className='bg-[#4e73df]' style={{width : "15%", height : "100%"}}>
+          <img style={{height : "15%", width : "100%"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
+          <hr className='sidebar-divider' />
+          <div className='sidebar-heading'>B2C</div>
+          </div>
         <div className='flex flex-col' style={{width : "85%"}}>
             <div className='' style={{height : "10%"}}></div>
             <div className='bg-[#f8f9fc]' style={{height : "90%"}}></div>
