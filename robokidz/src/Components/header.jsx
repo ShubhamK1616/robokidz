@@ -1,6 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import DashboardIcon from 'remixicon-react/Dashboard3LineIcon'
+import Dropdown from './dropdown'
+import SearchIcon from 'remixicon-react/SearchLineIcon'
+import LabelIcon from 'remixicon-react/PrinterLineIcon';
+import AddKitIcon from 'remixicon-react/LineChartLineIcon';
 
 function Header() {
   
@@ -10,7 +14,7 @@ const b2cArray = [
 },
 {
   label : "Add Kit",
-  icon : <DashboardIcon color='white'/>
+  icon : <AddKitIcon color='white'/>
 }
 ]
 const b2bArray = [
@@ -20,7 +24,7 @@ const b2bArray = [
 ]
 const adminArray = [
   {label : "Label Printing",
-  icon : <DashboardIcon color='white'/>
+  icon : <LabelIcon color='white'/>
 }
 ]
 
@@ -34,30 +38,44 @@ const adminArray = [
     //     </div>
     // </div>
     <div className='w-screen h-screen flex'>
-        <div className='bg-[#4e73df]' style={{width : "15%", height : "100%"}}>
+        <div className='bg-[#4e73df]' style={{width : "12%", height : "100%"}}>
           <img style={{height : "15%", width : "100%"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
           <hr className='sidebar-divider' />
           <div className='sidebar-heading'>B2C</div>  
           <div className='flex flex-col'>
             {b2cArray.map((item,index)=>(
-              <div className='flex flex-row px-4 py-1 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
+              <div className='flex flex-row p-4 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
             ))}
             </div>
+            <hr className='sidebar-divider' />
             <div className='sidebar-heading'>B2B</div>  
           <div className='flex flex-col'>
             {b2bArray.map((item,index)=>(
-              <div className='flex flex-row px-4 py-1 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
+              <div className='flex flex-row p-4 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
             ))}
             </div>
+            <hr className='sidebar-divider' />
             <div className='sidebar-heading'>ADMIN</div>  
           <div className='flex flex-col'>
             {adminArray.map((item,index)=>(
-              <div className='flex flex-row px-4 py-1 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
+              <div className='flex flex-row p-4 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
             ))}
             </div>
           </div>
-        <div className='flex flex-col' style={{width : "85%"}}>
-            <div className='' style={{height : "10%"}}></div>
+        <div className='flex flex-col' style={{width : "88%"}}>
+
+            <div className='flex flex-wrap items-center px-9' style={{height : "10%"}}>
+              <div className='flex' style={{width : "92%"}}>              
+                <form className='form-inline inline-flex'>
+               <input className='form-control mr-sm-2 border py-1 px-2 border-[#F1F5F9] rounded-l' type="search" placeholder="Search" aria-label="Search"></input>
+               <button className='btn btn-primary border rounded bg-[#4e73df] py-1 px-2' type="submit"><SearchIcon className='text-white'/></button>
+               </form>
+               </div>
+               <div className='flex justify-end navbar-divider' style={{width : "8%"}}>
+                <Dropdown />
+               </div>
+
+              </div>
             <div className='bg-[#f8f9fc]' style={{height : "90%"}}></div>
         </div>
     </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .App {
-  text-align: center;
+  text-align: none;
 }
 
 .App-logo {
@@ -14,6 +14,10 @@
   border-bottom: 1px solid #ffffff26;
   margin: 0 8% 8%;
 }
+.navbar-divider {
+  border-left: 1px solid #858796;
+  padding: 18px 0;
+}
 .sidebar-heading {
   color: #ffffff66;
   text-align: left;
@@ -22,6 +26,15 @@
   font-size: .65rem;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
