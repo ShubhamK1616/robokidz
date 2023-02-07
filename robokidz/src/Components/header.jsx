@@ -87,7 +87,7 @@ const adminArray = [
                {/* <h1 className='flex px-8 text-3xl font-normal text-[#5a5c69]'>Videos</h1>
                <CardGrid /> */}
                <div className='flex flex-col'>
-              <h1 className='flex text-3xl font-normal text-[#5a5c69] gap-y-2'>Videos</h1>
+              <h1 className='flex text-3xl font-normal text-[#5a5c69] gap-y-2 my-4'>Videos</h1>
                {/* <div className="accordion">
                 {accordionData.map(({ title, content }) => (
                <Accordion title={title} content={content} />
