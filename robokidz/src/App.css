@@ -25,7 +25,34 @@
   font-weight: 800;
   font-size: .65rem;
 }
+.shadow {
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%)
+}
+.accordion {
+  width: 100%;
+  margin: 2rem auto;
+}
 
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.accordion-title:hover {
+  background-color: #fff;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: #fff;
+}
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

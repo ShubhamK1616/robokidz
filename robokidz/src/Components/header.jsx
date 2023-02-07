@@ -5,6 +5,10 @@ import Dropdown from './dropdown'
 import SearchIcon from 'remixicon-react/SearchLineIcon'
 import LabelIcon from 'remixicon-react/PrinterLineIcon';
 import AddKitIcon from 'remixicon-react/LineChartLineIcon';
+import CardGrid from './Vcardgrid'
+import Accordion from './Accordion'
+import { accordionData } from './Accordioncontent'
+
 
 function Header() {
   
@@ -27,6 +31,8 @@ const adminArray = [
   icon : <LabelIcon color='white'/>
 }
 ]
+
+
 
 
   return (
@@ -65,18 +71,33 @@ const adminArray = [
         <div className='flex flex-col' style={{width : "88%"}}>
 
             <div className='flex flex-wrap items-center px-9' style={{height : "10%"}}>
-              <div className='flex' style={{width : "92%"}}>              
+              <div className='flex' style={{width : "90%"}}>              
                 <form className='form-inline inline-flex'>
                <input className='form-control mr-sm-2 border py-1 px-2 border-[#F1F5F9] rounded-l' type="search" placeholder="Search" aria-label="Search"></input>
                <button className='btn btn-primary border rounded bg-[#4e73df] py-1 px-2' type="submit"><SearchIcon className='text-white'/></button>
                </form>
                </div>
-               <div className='flex justify-end navbar-divider' style={{width : "8%"}}>
+               <div className='flex justify-end navbar-divider' style={{width : "10%"}}>
                 <Dropdown />
                </div>
 
               </div>
-            <div className='bg-[#f8f9fc]' style={{height : "90%"}}></div>
+            <div className='bg-[#f8f9fc] px-10
+            ' style={{height : "90%"}}>
+               {/* <h1 className='flex px-8 text-3xl font-normal text-[#5a5c69]'>Videos</h1>
+               <CardGrid /> */}
+               <div className='flex flex-col'>
+              <h1 className='flex text-3xl font-normal text-[#5a5c69] gap-y-2'>Videos</h1>
+               {/* <div className="accordion">
+                {accordionData.map(({ title, content }) => (
+               <Accordion title={title} content={content} />
+                ))}
+             </div> */}
+             <div className='flex flex-col gap-y-4 mt-10'>{accordionData.map(({ title, content }) => (
+               <Accordion title={title} content={content} />
+                ))}</div>
+             </div>
+            </div>
         </div>
     </div>
   )
