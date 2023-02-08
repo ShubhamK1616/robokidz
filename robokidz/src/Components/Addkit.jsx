@@ -11,7 +11,7 @@ import { accordionData } from './Accordioncontent'
 import Footer from './footer'
 
 
-function Header() {
+function Addkit () {
   
 const b2cArray = [
   {label : "Dashboard",
@@ -78,7 +78,7 @@ const adminArray = [
                <button className='btn btn-primary border rounded bg-[#4e73df] py-1 px-2' type="submit"><SearchIcon className='text-white'/></button>
                </form>
                </div>
-               <div className='flex justify-end navbar-divider' style={{width : "10%"}}>
+               <div className='flex justify-center navbar-divider' style={{width : "10%"}}>
                 <Dropdown />
                </div>
 
@@ -88,18 +88,19 @@ const adminArray = [
                {/* <h1 className='flex px-8 text-3xl font-normal text-[#5a5c69]'>Videos</h1>
                <CardGrid /> */}
                <div className='flex flex-col'>
-              <h1 className='flex text-3xl font-normal text-[#5a5c69] gap-y-2 my-4'>Videos</h1>
+              <h1 className='flex text-3xl font-normal justify-center text-[#5a5c69] gap-y-2 my-4'>Add Kit</h1>
                {/* <div className="accordion">
                 {accordionData.map(({ title, content }) => (
                <Accordion title={title} content={content} />
                 ))}
              </div> */}
-             <div className='flex flex-col gap-y-4 mt-10'>{accordionData.map(({ title, content }) => (
-               <Accordion title={title} content={content} />
-                ))}</div>
+             <div className='flex flex-col gap-y-4 mt-10'>
+             <input className='border py-1 px-2 border-[#F1F5F9] rounded-l w-full max-w-xl' type="search" placeholder="Enter Serial No" aria-label="Search"></input>
+               <button className='btn btn-primary border rounded bg-[#4e73df] py-1 px-2' type="submit">Add</button>
+             </div>
              </div>
             </div>
-            <div className='flex flex-wrap items-center justify-center' style={{height : "10%"}}>
+            <div className='flex flex-wrap items-center' style={{height : "10%"}}>
               <Footer />
             </div>
         </div>
@@ -107,4 +108,4 @@ const adminArray = [
   )
 }
 
-export default Header
+export default Addkit

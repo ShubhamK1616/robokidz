@@ -108,7 +108,7 @@ export default function Dropdown() {
   // <option value="logout">Logout</option>
   //  </select>
   <div  className='relative inline-block text-left'>
-    <h3 onClick={clickHandler} className="flex flex-row cursor-pointer justify-center items-center rounded-full bg-vryno-theme-blue-secondary w-12 h-12 md:w-10 md:h-10 lg:w-12 lg:h-12">Sagar S</h3>
+    <h3 onClick={clickHandler} className="flex flex-row cursor-pointer justify-center items-center rounded-full w-16 h-12 md:w-10 md:h-10 lg:w-16 lg:h-12">Sagar S</h3>
 { showProfileMenu &&   <div className='origin-top-right absolute right-0 mt-1 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
     <div className=''>Profile</div>
     <div className=''>Settings</div>
