@@ -76,6 +76,7 @@ return(
        <div className='text-[#00000080]' style={{width : "30%"}}><Pdrop options={printArray}/></div>
       </div>
       </div>
+      <div className='flex flex-row justify-center py-4'><button className='flex bg-[#4e73df] py-2 px-12 text-white rounded'>Print Label</button></div>
       <div><Table /></div>
         </div>
     </div>
