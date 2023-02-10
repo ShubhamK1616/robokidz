@@ -9,6 +9,7 @@ import CardGrid from './Vcardgrid'
 import Accordion from './Accordion'
 import { accordionData } from './Accordioncontent'
 import Footer from './footer'
+import Sidenav from './sidenav'
 
 
 function Addkit () {
@@ -73,8 +74,8 @@ const adminArray = [
 
             <div className='flex flex-wrap items-center px-9' style={{height : "10%"}}>
               <div className='flex' style={{width : "90%"}}>              
-                <form className='form-inline inline-flex'>
-               <input className='form-control mr-sm-2 border py-1 px-2 border-[#F1F5F9] rounded-l' type="search" placeholder="Search" aria-label="Search"></input>
+                <form className='inline-flex w-full max-w-md'>
+               <input className='mr-sm-2 py-1 px-2 rounded-l focus:border-blue-300 w-full outline-none border-2 focus:shadow-md' type="search" placeholder="Search for..." aria-label="Search"></input>
                <button className='btn btn-primary border rounded bg-[#4e73df] py-1 px-2' type="submit"><SearchIcon className='text-white'/></button>
                </form>
                </div>
@@ -94,9 +95,11 @@ const adminArray = [
                <Accordion title={title} content={content} />
                 ))}
              </div> */}
-             <div className='flex flex-col gap-y-4 mt-10'>
-             <input className='border py-1 px-2 border-[#F1F5F9] rounded-l w-full max-w-xl' type="search" placeholder="Enter Serial No" aria-label="Search"></input>
-               <button className='btn btn-primary border rounded bg-[#4e73df] py-1 px-2' type="submit">Add</button>
+             <div className='flex flex-col mt-10 justify-center items-center'>
+               <div className='flex flex-col gap-y-4 w-full max-w-md'>
+                <input className='p-4 border-[#6e707e] rounded-[10rem] focus:border-blue-300 outline-none border-2 focus:shadow-md' type="search" placeholder="Enter Serial No" aria-label="Search"></input>
+               <button className='btn btn-primary border bg-[#4e73df] p-4 rounded-[10rem] text-[#fff]' type="submit">Add</button>
+               </div>
              </div>
              </div>
             </div>
