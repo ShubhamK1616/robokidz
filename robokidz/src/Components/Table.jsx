@@ -61,6 +61,46 @@ function Table (props) {
         class : "Heavy",
         quantity : "1",
         printby : "printer"
+      },
+      {
+        sr : "6",
+        date : "fifty",
+        category : "Heavy Vehicle",
+        class : "Heavy",
+        quantity : "1",
+        printby : "printer"
+      },
+      {
+        sr : "7",
+        date : "fifty",
+        category : "Heavy Vehicle",
+        class : "Heavy",
+        quantity : "1",
+        printby : "printer"
+      },
+      {
+        sr : "8",
+        date : "fifty",
+        category : "Heavy Vehicle",
+        class : "Heavy",
+        quantity : "1",
+        printby : "printer"
+      },
+      {
+        sr : "9",
+        date : "fifty",
+        category : "Heavy Vehicle",
+        class : "Heavy",
+        quantity : "1",
+        printby : "printer"
+      },
+      {
+        sr : "10",
+        date : "fifty",
+        category : "Heavy Vehicle",
+        class : "Heavy",
+        quantity : "1",
+        printby : "printer"
       }
       ]
 return(
@@ -88,11 +128,11 @@ return(
      <th className='border py-3'>Print By</th>
     </tr>
  </thead>
-<tbody>
+<tbody className=' overflow-scroll'>
 {/* {props?.tableData?.map(data => (<tr><td>{data?.sr}</td><td>{data?.date}</td><td>{data?.category}</td><td>{data?.quantity}</td><td>{data?.printby}</td>
  <td>
 </td></tr>))} */}
-    {dataArray.slice((currentPageNumber - 1) *1, (currentPageNumber * 1)).map((item,index)=>( (<tr ><td className=' text-center'>{item?.sr}</td><td className=' text-center'>{item?.date}</td><td className=' text-center'>{item?.category}</td><td className=' text-center'>{item?.class}</td><td className=' text-center'>{item?.quantity}</td><td className=' text-center'>{item?.printby}</td>
+    {dataArray.slice((currentPageNumber - 1) *10, (currentPageNumber * 10)).map((item,index)=>( (<tr ><td className=' text-center'>{item?.sr}</td><td className=' text-center'>{item?.date}</td><td className=' text-center'>{item?.category}</td><td className=' text-center'>{item?.class}</td><td className=' text-center'>{item?.quantity}</td><td className=' text-center'>{item?.printby}</td>
               <td>
              </td></tr>)
             ))}

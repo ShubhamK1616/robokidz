@@ -43,7 +43,7 @@ const adminArray = [
           <Sidenav />
         <div className='flex flex-col' style={{width : "88%"}}>
               <Topnav />
-            <div className='bg-[#f8f9fc] px-10 overflow-scroll
+            <div className='bg-[#f8f9fc] px-10
             ' style={{height : "80%"}}>
                <div className='flex flex-col'>
               <h1 className='flex text-3xl font-normal justify-center text-[#5a5c69] gap-y-2 my-4'>Add Kit</h1>

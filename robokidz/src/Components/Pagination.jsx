@@ -3,7 +3,7 @@ import React from 'react';
 // import './pagination.css';
 const Pagination = props => {
 
-  const pageSize = 1;
+  const pageSize = 10;
   const itemsCount = props?.tableData?.length;
   const pagesCount = Math.ceil(itemsCount / pageSize);
 
