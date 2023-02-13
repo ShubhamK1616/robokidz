@@ -2,6 +2,9 @@ import React from 'react'
 import Dropdown from './dropdown'
 import Pdrop from './Pdropdown'
 import Table from './Table'
+import Footer from './footer'
+import Sidenav from './sidenav'
+import Topnav from './Topnav'
 
 function LabelPrinting () {
 
@@ -59,7 +62,20 @@ function LabelPrinting () {
       }
       ]
 return(
-    <div className='bg-[#f8f9fc] px-10' style={{height : "80%"}}>
+    //To set page for labelprinting
+
+
+
+    <div className='w-screen h-screen flex'>
+    <Sidenav />
+  <div className='flex flex-col' style={{width : "88%"}}>
+        <Topnav />
+      <div className='bg-[#f8f9fc] px-10 overflow-scroll
+      ' style={{height : "80%"}}>
+         <div className='flex flex-col'>
+        <h1 className='flex text-3xl font-normal justify-center text-[#5a5c69] gap-y-2 my-4'>Add Kit</h1>
+       <div className='flex flex-col mt-10 justify-center'>
+       <div className='bg-[#f8f9fc] px-10' style={{height : "80%"}}>
         <div className='flex flex-col'>
       <h1 className='flex text-3xl font-normal text-[#5a5c69] gap-y-2 my-4'>Label Print</h1>
       <div className='flex flex-row my-4'>
@@ -80,6 +96,14 @@ return(
       <div><Table /></div>
         </div>
     </div>
+       </div>
+       </div>
+      </div>
+      <div className='flex flex-wrap items-center' style={{height : "10%"}}>
+        <Footer />
+      </div>
+  </div>
+</div>
 )
 }
 

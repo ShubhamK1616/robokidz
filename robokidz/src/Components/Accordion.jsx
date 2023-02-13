@@ -9,7 +9,15 @@ const Accordion = ({ title, content }) => {
         <div>{title}</div>
         <div>{isActive ? '-' : '+'}</div>
       </div>
-      {isActive && <div className="accordion-content">{content}</div>}
+      {isActive && 
+      // <div className="accordion-content">{content}</div>
+      <div className="flex flex-row py-9">
+      <div className="flex mx-12 border rounded-xl bg-[#fff] shadow-md w-1/3 h-72">1</div>
+      <div className="flex mx-12 border rounded-xl bg-[#fff] shadow-md w-1/3 h-72">2</div>
+      <div className="flex mx-12 border rounded-xl bg-[#fff] shadow-md w-1/3 h-72">3</div>
+
+    </div>
+      }
     </div>
   );
 };

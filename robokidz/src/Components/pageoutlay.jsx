@@ -14,8 +14,8 @@ function Pageoutlay (props) {
           <Sidenav />
         <div className='flex flex-col' style={{width : "88%"}}>
               <Topnav />
-            {/* <Dashboard /> */}
-            <LabelPrinting />
+            <Dashboard />
+            {/* <LabelPrinting /> */}
             <div className='flex flex-wrap items-center' style={{height : "10%"}}>
               <Footer />
             </div>

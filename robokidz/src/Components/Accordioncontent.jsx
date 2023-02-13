@@ -21,4 +21,5 @@ export const accordionData = [
       quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
       dolor ut sequi minus iste? Quas?`
     }
+
   ];

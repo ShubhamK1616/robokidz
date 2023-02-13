@@ -18,12 +18,14 @@ function Sidenav () {
       ]
       const b2bArray = [
         {label : "Dashboard",
-        icon : <DashboardIcon color='white'/>
+        icon : <DashboardIcon color='white'/>,
+        link : "/dashboard"
       }
       ]
       const adminArray = [
         {label : "Label Printing",
-        icon : <LabelIcon color='white'/>
+        icon : <LabelIcon color='white'/>,
+        link : "/labelprinting"
       }
       ]
 
@@ -41,14 +43,14 @@ return(
             <div className='sidebar-heading'>B2B</div>  
           <div className='flex flex-col'>
             {b2bArray.map((item,index)=>(
-              <div className='flex flex-row p-4 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
+              <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading'>ADMIN</div>  
           <div className='flex flex-col'>
             {adminArray.map((item,index)=>(
-              <div className='flex flex-row p-4 text-white font-bold gap-x-4'>{item.icon}{item.label}</div>
+              <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
           </div>
