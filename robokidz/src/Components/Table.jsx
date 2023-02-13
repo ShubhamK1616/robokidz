@@ -1,7 +1,11 @@
 import React from 'react'
 import Pdrop from './Pdropdown'
+import Pagination from './Pagination'
+import { useState } from 'react'
 
 function Table (props) {
+  const [currentPageNumber, setCurrentPageNumber] = useState(1)
+
     const printArray = [
         {label : "10",
         value : "ten"
@@ -29,14 +33,14 @@ function Table (props) {
       },
       {
         sr : "2",
-        date : "ten",
+        date : "twenty",
         category : "Heavy Vehicle",
         class : "Heavy",
         quantity : "1",
         printby : "printer"
       },
       {sr : "3",
-      date : "ten",
+      date : "thirty",
       category : "Heavy Vehicle",
       class : "Heavy",
       quantity : "1",
@@ -44,7 +48,15 @@ function Table (props) {
       },
       {
         sr : "4",
-        date : "ten",
+        date : "forty",
+        category : "Heavy Vehicle",
+        class : "Heavy",
+        quantity : "1",
+        printby : "printer"
+      },
+      {
+        sr : "5",
+        date : "fifty",
         category : "Heavy Vehicle",
         class : "Heavy",
         quantity : "1",
@@ -80,7 +92,7 @@ return(
 {/* {props?.tableData?.map(data => (<tr><td>{data?.sr}</td><td>{data?.date}</td><td>{data?.category}</td><td>{data?.quantity}</td><td>{data?.printby}</td>
  <td>
 </td></tr>))} */}
-    {dataArray.map((item,index)=>( (<tr ><td className=' text-center'>{item?.sr}</td><td className=' text-center'>{item?.date}</td><td className=' text-center'>{item?.category}</td><td className=' text-center'>{item?.class}</td><td className=' text-center'>{item?.quantity}</td><td className=' text-center'>{item?.printby}</td>
+    {dataArray.slice((currentPageNumber - 1) *1, (currentPageNumber * 1)).map((item,index)=>( (<tr ><td className=' text-center'>{item?.sr}</td><td className=' text-center'>{item?.date}</td><td className=' text-center'>{item?.category}</td><td className=' text-center'>{item?.class}</td><td className=' text-center'>{item?.quantity}</td><td className=' text-center'>{item?.printby}</td>
               <td>
              </td></tr>)
             ))}
@@ -100,13 +112,15 @@ return(
 
       </div>
       <div className='flex flex-row p-4'>
-        <div style={{width : "80%"}}>Showing 0 to 0 of 0 entries</div>
+        {/* <div style={{width : "80%"}}>Showing 0 to 0 of 0 entries</div>
+
         <div className='flex flex-wrap' style={{width : "20%"}}>
         <a className=' px-4 py-3 border' href="#">Previous</a>
         <a className=' px-4 py-3 border' href="#">1</a>
         <a className=' px-4 py-3 border' href="#">2</a>
         <a className=' px-4 py-3 border' href="#">Next</a>
-</div>
+</div> */}
+           <Pagination tableData={dataArray} currentPageNumber={currentPageNumber} setCurrentPageNumber={(pageNumber) => setCurrentPageNumber(pageNumber)}/>
      </div>
     </div>
     </div>
