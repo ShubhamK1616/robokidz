@@ -1,11 +1,20 @@
-import React from 'react'
-import Dropdown from './dropdown'
-import SearchIcon from 'remixicon-react/SearchLineIcon'
+import React from 'react';
+import Dropdown from './dropdown';
+import SearchIcon from 'remixicon-react/SearchLineIcon';
+import ProfileIcon from 'remixicon-react/User3FillIcon';
 
 function Topnav () {
 return(
+        <>
+        <div className=' md:hidden flex flex-row items-center px-9 shadow-lg shadow-[#3a3b451a] z-10 gap-x-6' style={{height : "8%"}}>
+             <div className=' flex w-5/6 '></div>
+             <div className=' flex w-1/12'><SearchIcon className=''/></div>
+             <div className=' flex w-1/12 '><Dropdown /></div>
 
-        <div className='flex flex-wrap items-center px-9 shadow-lg shadow-[#3a3b451a] z-10' style={{height : "10%"}}>
+        </div>
+
+
+        <div className=' hidden md:flex md:flex-wrap items-center px-9 shadow-lg shadow-[#3a3b451a] z-10' style={{height : "10%"}}>
 
               <div className='flex' style={{width : "90%"}}>              
                 <form className='flex w-full max-w-lg'>
@@ -18,6 +27,7 @@ return(
                </div>
 
         </div>
+        </>
 )
 }
 

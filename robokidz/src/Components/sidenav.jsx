@@ -39,7 +39,7 @@ function Sidenav () {
 
 return(<>
          <div className={`md:hidden`}>
-          <button className=' p-7 border'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
+          <button className=' p-7 border text-[#4e73df]'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
          </div>
         <div className='bg-[#4e73df] hidden md:flex md:flex-col' style={{width : "12%", height : "100%"}}>
           <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />

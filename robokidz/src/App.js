@@ -8,6 +8,7 @@ import Addkit from './Components/Addkit';
 // import Dashboard from './Components/Dashboard';
 import Pageoutlay from './Components/pageoutlay';
 import LabelPrinting from './Components/labelprinting';
+import Login from './Components/Loginpage';
 // import Header from './Components/header';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/dashboard" element={<Pageoutlay />}/>
           <Route exact path="/addkit" element={<Addkit />}/>
           <Route exact path="/labelprinting" element={<LabelPrinting />}/>
+          <Route exact path="/login" element={<Login />}/>
         </Routes>
     </Router>
     </div>

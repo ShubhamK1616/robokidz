@@ -28,7 +28,7 @@ export default function Dropdown() {
 
   return (
   <div  className='relative inline-block text-left'>
-    <h3 onClick={clickHandler} className="flex flex-row cursor-pointer justify-center items-center rounded-full w-full">Sagar S    <img src={logo} alt="logo" style={{width : "40px", height : "30px"}}
+    <h3 onClick={clickHandler} className="flex flex-row cursor-pointer justify-center items-center rounded-full w-full">Sagar S <img src={logo} alt="logo" style={{width : "40px", height : "30px"}}
      /></h3>
   
 { showProfileMenu &&   <div className='origin-top-right absolute right-0 mt-1 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
