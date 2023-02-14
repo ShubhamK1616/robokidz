@@ -12,49 +12,53 @@ function Sidenav () {
     const b2cArray = [
         {label : "Dashboard",
         icon : <DashboardIcon color='white'/>,
+        icont: <DashboardIcon className=' mx-12 h-8 w-7' color='white'/>,
         link : "/dashboard" 
       },
       {
         label : "Add Kit",
         icon : <AddKitIcon color='white'/>,
+        icont : <AddKitIcon className=' mx-12 h-8 w-7' color='white'/>,
         link : "/addkit" 
       }
       ]
       const b2bArray = [
         {label : "Dashboard",
         icon : <DashboardIcon color='white'/>,
+        icont : <DashboardIcon className=' mx-12 h-8 w-7' color='white'/>,
         link : "/dashboard"
       }
       ]
       const adminArray = [
         {label : "Label Printing",
         icon : <LabelIcon color='white'/>,
+        icont : <LabelIcon className=' mx-12 h-8 w-7' color='white'/>,
         link : "/labelprinting"
       }
       ]
 
 return(<>
          <div className={`md:hidden`}>
-          <button><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
+          <button className=' p-7 border'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
          </div>
         <div className='bg-[#4e73df] hidden md:flex md:flex-col' style={{width : "12%", height : "100%"}}>
           <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
           <hr className='sidebar-divider' />
-          <div className='sidebar-heading'>B2C</div>  
+          <div className='sidebar-heading text-left'>B2C</div>  
           <div className='flex flex-col'>
             {b2cArray.map((item,index)=>(
               <Link className='flex flex-row p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
-            <div className='sidebar-heading'>B2B</div>  
+            <div className='sidebar-heading text-left'>B2B</div>  
           <div className='flex flex-col'>
             {b2bArray.map((item,index)=>(
               <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
-            <div className='sidebar-heading'>ADMIN</div>  
+            <div className='sidebar-heading text-left'>ADMIN</div>  
           <div className='flex flex-col'>
             {adminArray.map((item,index)=>(
               <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
@@ -62,31 +66,31 @@ return(<>
             </div>
           </div>
           {
-            sideMenuOpenCloseState && <div className='bg-blue-200 absolute z-[20]' style={{width : "50%", height : "100%"}}>
+            sideMenuOpenCloseState && <div className='bg-[#4e73df] absolute z-[20]' style={{width : "35%", height : "100%"}}>
               <div className='flex flex-row w-full'>
-              <img className='flex w-4/5' style={{ height : "130px", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
-              <div className='flex w-1/5'><CloseIcon onClick={()=>setSideMenuOpenCloseState(false)}/></div>
+              <img className='flex w-4/5' style={{ height : "80px", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
+              <div className='flex w-1/5 text-white'><CloseIcon onClick={()=>setSideMenuOpenCloseState(false)}/></div>
               </div>
-              
+        
           <hr className='sidebar-divider' />
-          <div className='sidebar-heading'>B2C</div>  
-          <div className='flex flex-col'>
+          <div className='sidebar-heading text-center'>B2C</div>  
+          <div className='flex flex-col text-center'>
             {b2cArray.map((item,index)=>(
-              <Link className='flex flex-row p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
+              <Link className=' px-2 text-white mb-2'to={item.link}>{item.icont}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
-            <div className='sidebar-heading'>B2B</div>  
-          <div className='flex flex-col'>
+            <div className='sidebar-heading text-center'>B2B</div>  
+          <div className='flex flex-col text-center'>
             {b2bArray.map((item,index)=>(
-              <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='px-2 text-white mb-2' to={item.link}>{item.icont}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
-            <div className='sidebar-heading'>ADMIN</div>  
-          <div className='flex flex-col'>
+            <div className='sidebar-heading text-center'>ADMIN</div>  
+          <div className='flex flex-col text-center'>
             {adminArray.map((item,index)=>(
-              <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='px-2 text-white mb-2' to={item.link}>{item.icont}{item.label}</Link>
             ))}
             </div>
             </div>
