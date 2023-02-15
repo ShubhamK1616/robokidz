@@ -9,6 +9,8 @@ import Addkit from './Components/Addkit';
 import Pageoutlay from './Components/pageoutlay';
 import LabelPrinting from './Components/labelprinting';
 import Login from './Components/Loginpage';
+import Forgotpw from './Components/Forgotpsw';
+import Createac from './Components/Register';
 // import Header from './Components/header';
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
           <Route exact path="/addkit" element={<Addkit />}/>
           <Route exact path="/labelprinting" element={<LabelPrinting />}/>
           <Route exact path="/login" element={<Login />}/>
+          <Route exact path="/forgotpw" element={<Forgotpw />}/>
+          <Route exact path="/register" element={<Createac />}/>
         </Routes>
     </Router>
     </div>
