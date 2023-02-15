@@ -4,7 +4,6 @@ import LabelIcon from 'remixicon-react/PrinterLineIcon';
 import AddKitIcon from 'remixicon-react/LineChartLineIcon';
 import {Link} from 'react-router-dom';
 import HambIcon from 'remixicon-react/MenuLineIcon';
-import CloseIcon from 'remixicon-react/CloseLineIcon';
 
 function Sidenav () {
 
@@ -39,7 +38,7 @@ function Sidenav () {
 
 return(<>
          <div className={`md:hidden`}>
-          <button className=' p-7 border text-[#4e73df]'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
+          <button className='m-2 p-4 border rounded-full text-[#4e73df]'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
          </div>
         <div className='bg-[#4e73df] hidden md:flex md:flex-col' style={{width : "12%", height : "100%"}}>
           <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
@@ -47,21 +46,21 @@ return(<>
           <div className='sidebar-heading text-left'>B2C</div>  
           <div className='flex flex-col'>
             {b2cArray.map((item,index)=>(
-              <Link className='flex flex-row p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col p-4 md:p-2 lg:p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading text-left'>B2B</div>  
           <div className='flex flex-col'>
             {b2bArray.map((item,index)=>(
-              <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col p-4 md:p-2 lg:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading text-left'>ADMIN</div>  
           <div className='flex flex-col'>
             {adminArray.map((item,index)=>(
-              <Link className='flex flex-row p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col p-4 md:p-2 lg:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
           </div>
@@ -69,7 +68,7 @@ return(<>
             sideMenuOpenCloseState && <div className='bg-[#4e73df] absolute z-[20]' style={{width : "35%", height : "100%"}}>
               <div className='flex flex-row w-full'>
               <img className='flex w-4/5' style={{ height : "80px", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
-              <div className='flex w-1/5 text-white'><CloseIcon onClick={()=>setSideMenuOpenCloseState(false)}/></div>
+              <div className='flex w-1/5 text-white'><HambIcon onClick={()=>setSideMenuOpenCloseState(false)}/></div>
               </div>
         
           <hr className='sidebar-divider' />
