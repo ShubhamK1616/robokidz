@@ -41,27 +41,27 @@ return(<>
 
           <button className='mx-2 my-4 p-2 border rounded-full text-[#4e73df]'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
          </div>
-        <div className='bg-[#4e73df] hidden md:flex md:flex-col w-[12%] h-[100%]'>
+        <div className='bg-[#4e73df] hidden md:flex md:flex-col w-[15%] h-[100%]'>
           <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
           <hr className='sidebar-divider' />
           <div className='sidebar-heading text-left'>B2C</div>  
           <div className='flex flex-col'>
             {b2cArray.map((item,index)=>(
-              <Link className='flex lg:flex-row md:flex-col lg:text-sm xl:text-base p-4 md:p-2 lg:p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-1 xl:p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading text-left'>B2B</div>  
           <div className='flex flex-col'>
             {b2bArray.map((item,index)=>(
-              <Link className='flex lg:flex-row md:flex-col p-4 md:p-2 lg:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-1 xl:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading text-left'>ADMIN</div>  
           <div className='flex flex-col'>
             {adminArray.map((item,index)=>(
-              <Link className='flex lg:flex-row md:flex-col p-4 md:p-2 lg:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-1 xl:p-4  text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
           </div>

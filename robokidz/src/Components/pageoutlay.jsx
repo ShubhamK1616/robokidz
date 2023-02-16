@@ -11,7 +11,7 @@ function Pageoutlay (props) {
     <div className='w-screen h-screen flex'>
 
           <Sidenav />
-        <div className='flex flex-col w-[88%]'>
+        <div className='flex flex-col w-[85%]'>
               <Topnav />
             <Dashboard />
             <div className='flex flex-wrap items-center h-[10%]'>

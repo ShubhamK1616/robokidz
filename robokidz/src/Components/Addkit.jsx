@@ -9,7 +9,7 @@ function Addkit () {
   return (
     <div className='w-screen h-screen flex'>
           <Sidenav />
-        <div className='flex flex-col w-[88%]'>
+        <div className='flex flex-col w-[85%]'>
               <Topnav />
             <div className='bg-[#f8f9fc] px-10 h-[80%]'>
                <div className='flex flex-col'>

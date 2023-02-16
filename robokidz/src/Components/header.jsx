@@ -38,7 +38,7 @@ const adminArray = [
 
   return (
     <div className='w-screen h-screen flex'>
-        <div className='bg-[#4e73df] w-[12%] h-[100%]'>
+        <div className='bg-[#4e73df] w-[15%] h-[100%]'>
           <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
           <hr className='sidebar-divider' />
           <div className='sidebar-heading'>B2C</div>  
@@ -62,7 +62,7 @@ const adminArray = [
             ))}
             </div>
           </div>
-        <div className='flex flex-col' style={{width : "88%"}}>
+        <div className='flex flex-col' style={{width : "85%"}}>
 
             <div className='flex flex-wrap items-center px-9' style={{height : "10%"}}>
               <div className='flex' style={{width : "90%"}}>              
