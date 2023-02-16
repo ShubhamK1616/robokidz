@@ -1,8 +1,5 @@
-import { useState, Fragment } from 'react'
-// import { Menu, Transition } from '@headlessui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DropDownIcon from 'remixicon-react/ArrowDropDownLineIcon';
-// import Logo from '../assets/images/th.png'
+import { useState } from 'react'
+// import DropDownIcon from 'remixicon-react/ArrowDropDownLineIcon';
 import ProfileIcon from 'remixicon-react/User3FillIcon';
 import SettingsIcon from 'remixicon-react/Settings4LineIcon';
 import LogtIcon from 'remixicon-react/LogoutBoxRLineIcon';
@@ -11,9 +8,9 @@ import logo from '../assets/images/th.png'
 
 
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
 
 

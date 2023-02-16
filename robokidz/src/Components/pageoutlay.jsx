@@ -3,7 +3,6 @@ import Footer from './footer'
 import Sidenav from './sidenav'
 import Topnav from './Topnav'
 import Dashboard from './Dashboard'
-import LabelPrinting from './labelprinting'
 
 
 function Pageoutlay (props) {
@@ -12,11 +11,10 @@ function Pageoutlay (props) {
     <div className='w-screen h-screen flex'>
 
           <Sidenav />
-        <div className='flex flex-col' style={{width : "88%"}}>
+        <div className='flex flex-col w-[88%]'>
               <Topnav />
             <Dashboard />
-            {/* <LabelPrinting /> */}
-            <div className='flex flex-wrap items-center' style={{height : "10%"}}>
+            <div className='flex flex-wrap items-center h-[10%]'>
               <Footer />
             </div>
         </div>

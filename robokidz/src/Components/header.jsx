@@ -37,15 +37,8 @@ const adminArray = [
 
 
   return (
-    // <div className='w-screen h-screen grid grid-cols-12 '>    
-    //     <div className='col-span-2 bg-[#4e73df]'>1</div>
-    //     <div className='col-span-10 grid grid-rows-6'>
-    //         <div className='row-span-1 bg-red-300'>2</div>
-    //         <div className='row-span-5 bg-green-300'>3</div>
-    //     </div>
-    // </div>
     <div className='w-screen h-screen flex'>
-        <div className='bg-[#4e73df]' style={{width : "12%", height : "100%"}}>
+        <div className='bg-[#4e73df] w-[12%] h-[100%]'>
           <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
           <hr className='sidebar-divider' />
           <div className='sidebar-heading'>B2C</div>  
