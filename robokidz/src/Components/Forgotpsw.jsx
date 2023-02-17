@@ -5,7 +5,7 @@ import Logimg from '../assets/images/logi.png'
 function Forgotpw () {
 return(
     <div className='flex h-screen w-screen bg-[#4e73df]'>
-    <div className="container mx-auto">
+    <div className="container m-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6  bg-white rounded h-3/5 w-4/5  lg:w-3/5 mx-auto my-12">
         <div className="hidden md:flex justify-center p-6">
             <img className=' w-4/5 md:w-full object-cover' src={Logimg} alt='logo' />

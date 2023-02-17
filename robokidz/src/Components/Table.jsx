@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Pdrop from './Pdropdown'
 import Pagination from './Pagination'
 import { useState } from 'react'
+import axios from "axios";
 
 function Table (props) {
   const [currentPageNumber, setCurrentPageNumber] = useState(1)
+  const [post, setPost] = useState([]);
+
+   useEffect (() => {  
+     fetch('https://6ec4-124-253-41-84.in.ngrok.io/')
+     .then(res => res.json())
+     .then(json => setPost(json.products))
+
+   },[])
 
     const printArray = [
         {label : "10",
@@ -105,7 +114,7 @@ function Table (props) {
       ]
 return(
     <div className='container border rounded shadow'>
-    <div className='flex flex-col'>
+    <div className='flex flex-col overflow-auto'>
       <div className='flex flex-row border py-3'><h1 className='text-[#4e73df] px-3 font-bold text-sm lg:text-base'>Data Tables Example</h1></div>
       <div className='flex flex-col lg:flex-row py-5 px-3'>
         <div className='flex w-full lg:w-[75%] py-2 lg:py-0 text-xs lg:text-base'><p className=' px-2 '>Show</p>  <Pdrop className='' options={printArray}/> <p className=' px-2'>entries</p> </div>
@@ -116,7 +125,7 @@ return(
            
 
         </div>
-      <div className='flex flex-row px-3 overflow-scroll'>
+      <div className='flex flex-row px-3 overflow-scroll lg:overflow-visible'>
       <table class="table align-middle mb-0 bg-white w-full border text-[#00000080] text-[10px] lg:text-base">
     <thead class="bg-light">
     <tr>
@@ -128,7 +137,7 @@ return(
      <th className='border py-3'>Print By</th>
     </tr>
  </thead>
-<tbody className=' overflow-scroll'>
+<tbody className=' overflow-scroll lg:overflow-visible'>
     {dataArray.slice((currentPageNumber - 1) *10, (currentPageNumber * 10
       )).map((item,index)=>( (<tr ><td className=' text-center'>{item?.sr}</td><td className=' text-center'>{item?.date}</td><td className=' text-center'>{item?.category}</td><td className=' text-center'>{item?.class}</td><td className=' text-center'>{item?.quantity}</td><td className=' text-center'>{item?.printby}</td>
               <td>

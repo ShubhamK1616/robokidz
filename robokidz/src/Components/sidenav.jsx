@@ -5,6 +5,7 @@ import AddKitIcon from 'remixicon-react/LineChartLineIcon';
 import {Link} from 'react-router-dom';
 import HambIcon from 'remixicon-react/MenuLineIcon';
 
+
 function Sidenav () {
 
   const [sideMenuOpenCloseState,setSideMenuOpenCloseState] = React.useState(false)
@@ -47,21 +48,21 @@ return(<>
           <div className='sidebar-heading text-left'>B2C</div>  
           <div className='flex flex-col'>
             {b2cArray.map((item,index)=>(
-              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-1 xl:p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-2 xl:p-4 text-white font-bold gap-x-4'to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading text-left'>B2B</div>  
           <div className='flex flex-col'>
             {b2bArray.map((item,index)=>(
-              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-1 xl:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-2 xl:p-4 text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
             <hr className='sidebar-divider' />
             <div className='sidebar-heading text-left'>ADMIN</div>  
           <div className='flex flex-col'>
             {adminArray.map((item,index)=>(
-              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-1 xl:p-4  text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
+              <Link className='flex lg:flex-row md:flex-col md:text-xs lg:text-sm xl:text-base p-4 md:p-2 lg:p-2 xl:p-4  text-white font-bold gap-x-4' to={item.link}>{item.icon}{item.label}</Link>
             ))}
             </div>
           </div>
