@@ -4,6 +4,8 @@ import LabelIcon from 'remixicon-react/PrinterLineIcon';
 import AddKitIcon from 'remixicon-react/LineChartLineIcon';
 import {Link} from 'react-router-dom';
 import HambIcon from 'remixicon-react/MenuLineIcon';
+import logoi from '../assets/images/Adjlogo1.png';
+
 
 
 function Sidenav () {
@@ -43,7 +45,7 @@ return(<>
           <button className='mx-2 my-4 p-2 border rounded-full text-[#4e73df]'><HambIcon onClick={()=>setSideMenuOpenCloseState(true)}/></button>
          </div>
         <div className='bg-[#4e73df] hidden md:flex md:flex-col w-[15%] h-[100%]'>
-          <img style={{height : "10%", width : "100%", objectFit : "cover"}} src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
+          <img className=' h-[10%] w-full lg:w-[85%] object-cover mx-auto' src={logoi} alt='logo' />
           <hr className='sidebar-divider' />
           <div className='sidebar-heading text-left'>B2C</div>  
           <div className='flex flex-col'>
@@ -69,7 +71,8 @@ return(<>
           {
             sideMenuOpenCloseState && <div className='bg-[#4e73df] absolute z-[20]' style={{width : "35%", height : "100%"}}>
               <div className='flex flex-row w-full'>
-              <img className='flex w-4/5 h-[80px] object-cover' src='https://intranet.cyret.com/LMSDemo/img/small_logo.png' alt='logo' />
+              <img className='flex w-4/5 h-[80px] ' src={logoi} alt='logo' />
+              {/* <img className=' h-[10%] w-full lg:w-[85%] object-cover mx-auto' src={logoi} alt='logo' /> */}
               <div className='flex w-1/5 text-white'><HambIcon onClick={()=>setSideMenuOpenCloseState(false)}/></div>
               </div>
         

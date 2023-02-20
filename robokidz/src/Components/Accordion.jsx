@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
+  const [video, setVideo] = useState([]);
+
+  useEffect (() => {  
+    fetch('https://6ec4-124-253-41-84.in.ngrok.io/')
+    .then(res => res.json())
+    .then(json => setVideo(json.products))
+
+  },[])
 
   return (
     <div className="accordion-item gap-y-4 bg-[#f8f9fc]">
